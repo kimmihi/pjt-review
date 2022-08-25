@@ -13,6 +13,7 @@ import {
   SmallCategory,
 } from "src/data/level-select";
 
+// 첫 번째 설계했을 때
 const getCategoryList = (parent: number, list: Array<Category>) => {
   return list.filter((item) => item.parent === parent);
 };
@@ -112,3 +113,9 @@ const CategorySelect: FC = () => {
 };
 
 export default CategorySelect;
+
+/*
+문제점
+- 분류가 추가된다면? 관리해야할 상태가 증가, 이벤트 핸들러 추가
+- 복잡한 상태
+*/
